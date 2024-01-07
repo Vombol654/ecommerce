@@ -1,6 +1,5 @@
 const dotenv = require("dotenv");
 const apps = require("./app");
-// import { connect_database } from "./app";
 
 // config
 dotenv.config({ path: "backend/config/config.env" });

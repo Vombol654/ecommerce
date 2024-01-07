@@ -1,6 +1,7 @@
 const express = require("express");
 // const dotenv=require
 const mongoose = require("mongoose");
+const productRoute = require("./routes/productRoute");
 const app = express();
 
 const connect_database = () => {
@@ -17,8 +18,8 @@ const connect_database = () => {
 app.use(express.json());
 
 // route imports
-const product = require("./routes/productRoute");
-app.use("/api/v1", product);
+
+app.use("/api/v1", productRoute);
 module.exports = {
   app,
   connect_database,
